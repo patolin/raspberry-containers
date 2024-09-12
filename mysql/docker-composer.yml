@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  db:
+    image: jsurf/rpi-mariadb
+    container_name: mysql-db
+    restart: always
+    environment:
+      TZ: America/New_York
+      MYSQL_DATABASE: 'myuas_db'
+      MYSQL_ROOT_PASSWORD: 'p@ssw0rd'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - ./mysql_data:/var/lib/mysql
