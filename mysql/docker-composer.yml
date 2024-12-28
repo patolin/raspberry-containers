@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       TZ: America/New_York
-      MYSQL_DATABASE: 'myuas_db'
+      MYSQL_DATABASE: 'my_db'
       MYSQL_ROOT_PASSWORD: 'p@ssw0rd'
     ports:
       - '3306:3306'
